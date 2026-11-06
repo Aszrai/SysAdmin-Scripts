@@ -1,3 +1,4 @@
+<img width="1402" height="865" alt="image" src="https://github.com/user-attachments/assets/605c50d7-e424-4d08-ab7f-06a83c7e5fd7" />
 
 # HP Printer Cleanup Tool
 
