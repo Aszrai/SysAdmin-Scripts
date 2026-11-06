@@ -1,9 +1,9 @@
-HP Printer Cleanup Tool
+**HP Printer Cleanup Tool**
 A PowerShell utility for removing HP printer queues and HP printer drivers from Windows.
 
 The script automatically requests Administrator privileges, removes detected HP printers and drivers, restarts the Windows Print Spooler, and displays any HP printer components that remain.
 
-Features
+**Features**
 Automatically requests Administrator privileges
 Detects printers containing HP or Hewlett-Packard
 Removes matching printer queues
@@ -18,17 +18,17 @@ Windows PowerShell
 Administrator privileges
 Windows Print Management PowerShell cmdlets
 Usage
-1. Download the script
+**1. Download the script**
 Download the .ps1 file to the Windows computer that needs HP printer cleanup.
 
 For example:
 
 HP-Printer-Cleanup.ps1
-2. Run PowerShell
+**2. Run PowerShell**
 Navigate to the folder containing the script:
 
 cd "C:\Path\To\Script"
-3. Run the script
+**3. Run the script**
 .\HP-Printer-Cleanup.ps1
 The script checks whether it is running with Administrator privileges.
 
@@ -37,7 +37,7 @@ If it is not, it will automatically relaunch itself using:
 Start-Process powershell.exe -Verb RunAs
 Accept the Windows UAC prompt to continue.
 
-What the Script Does
+**What the Script Does**
 1. Checks Administrator Privileges
 The script determines whether the current PowerShell process is elevated.
 
@@ -108,7 +108,7 @@ If Windows prevents the script from running because of the PowerShell execution 
 powershell.exe -ExecutionPolicy Bypass -File ".\HP-Printer-Cleanup.ps1"
 The script also uses -ExecutionPolicy Bypass when relaunching itself with Administrator privileges.
 
-Warning
+**Warning**
 This script removes HP printers and HP printer drivers from the computer.
 
 Use it only on systems where HP printer removal is intended.
@@ -117,7 +117,7 @@ The script searches using the terms HP and Hewlett-Packard. Because matching is 
 
 Some drivers may fail to uninstall if they are still being used by Windows or another printer queue. These failures are displayed as warnings rather than causing the entire script to stop.
 
-Troubleshooting
+**Troubleshooting**
 Driver cannot be removed
 A driver may still be associated with another printer queue or be in use by the Print Spooler.
 
@@ -134,7 +134,8 @@ Script execution is disabled
 Run:
 
 powershell.exe -ExecutionPolicy Bypass -File ".\HP-Printer-Cleanup.ps1"
-Disclaimer
+
+**Disclaimer**
 This script is intended for IT administration and troubleshooting purposes. Test it in a controlled environment before deploying it broadly.
 
 Use at your own risk. Review the script and verify that its matching and removal behavior is appropriate for your environment before running it on production devices.
